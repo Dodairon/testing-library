@@ -9,6 +9,8 @@ describe('Teste o componente <About.js />', () => {
   });
 
   it('Teste se a página contém as informações sobre a Pokédex.', () => {
+    const heading = screen.getByRole('heading', { name: /About Pokédex/i });
+    expect(heading).toBeInTheDocument();
   });
 
   it('Teste se a página contém um heading h2 com o texto About Pokédex', () => {
